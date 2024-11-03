@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог про нутриціологію</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Блог про нутриціологію</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="services.html">Послуги</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section id="categories">
+            <h2>Категорії</h2>
+            <div id="category-list"></div>
+        </section>
+
+        <section id="blog-posts" style="display: none;">
+            <h2 id="category-title"></h2>
+            <button onclick="showCategories()">Повернутися до категорій</button>
+            <div id="posts-list"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Нутриціологія. Всі права захищені.</p>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+</html>

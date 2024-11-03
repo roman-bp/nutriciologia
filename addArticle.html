@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Додати нову статтю</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Додати нову статтю</h1>
+    <form id="addArticleForm">
+        <!-- Вибір категорії з випадаючого списку -->
+        <label for="category">Категорія:</label>
+        <select id="category" name="category" required>
+            <option value="Основи харчування">Основи харчування</option>
+            <option value="Схуднення">Схуднення</option>
+            <option value="Здоров’я шкіри">Здоров’я шкіри</option>
+            <option value="Рецепти">Рецепти</option>
+            <option value="Загальні поради">Загальні поради</option>
+        </select>
+
+        <!-- Поле для введення заголовка -->
+        <label for="title">Заголовок:</label>
+        <input type="text" id="title" name="title" required>
+
+        <!-- Поле для опису -->
+        <label for="description">Короткий опис:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <!-- Вибір файлу для логотипу статті -->
+        <label for="logo">Логотип статті (виберіть файл):</label>
+        <input type="file" id="logo" name="logo" accept="image/*">
+
+        <!-- Вибір файлів для фотографій до статті -->
+        <label for="articleImages">Фото для статті (виберіть файли):</label>
+        <input type="file" id="articleImages" name="articleImages" accept="image/*" multiple>
+
+        <!-- Поле для повного тексту статті -->
+        <label for="content">Повний текст статті:</label>
+        <textarea id="content" name="content" required></textarea>
+
+        <button type="button" onclick="addArticle()">Додати статтю</button>
+    </form>
+
+    <h2>Збережений JSON:</h2>
+    <pre id="jsonOutput"></pre>
+
+    <script src="form.js"></script>
+</body>
+</html>

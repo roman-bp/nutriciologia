@@ -1,0 +1,324 @@
+/* Визначення змінних кольорів */
+/* 
+--primary-color: основний колір для заголовків, кнопок і навігації
+--secondary-color: вторинний колір для футера та інших елементів фону
+--text-color: основний колір тексту
+--background-color: колір фону для карток та інших елементів з білим фоном
+--button-text-color: колір тексту на кнопках
+--button-hover-color: колір кнопки при наведенні
+--border-color: колір обводки для карток та полів вводу
+--light-gray: колір для світло-сірих елементів фону, наприклад, для кнопок у секції категорій
+--sidebar-link-color: колір посилань у бічному меню
+*/
+:root {
+    --primary-color: #5A9;
+    --secondary-color: #333;
+    --text-color: #333;
+    --background-color: #fff;
+    --button-text-color: #fff;
+    --button-hover-color: #488b66;
+    --border-color: #ddd;
+    --light-gray: #f5f5f5;
+    --sidebar-link-color: #5A9;
+}
+
+/* Загальні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color); /* Основний колір фону заголовка */
+    padding: 1em;
+    text-align: center;
+    color: var(--button-text-color); /* Колір тексту заголовка */
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: var(--button-text-color); /* Колір тексту посилань у заголовку */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--secondary-color); /* Вторинний колір для фону футера */
+    color: var(--button-text-color); /* Колір тексту у футері */
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Основні стилі для сторінки блогу */
+#blog-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#sidebar {
+    margin: 20px 0;
+}
+
+#sidebar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color); /* Колір обводки полів вводу */
+    border-radius: 5px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin: 10px 0;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: var(--sidebar-link-color); /* Колір посилань у бічному меню */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.post {
+    width: 300px;
+    background-color: var(--background-color); /* Колір фону карток */
+    border: 1px solid var(--border-color); /* Колір обводки карток */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post h2 {
+    font-size: 1.2em;
+    margin: 10px;
+    color: var(--text-color); /* Основний колір тексту заголовка статті */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.post p {
+    margin: 10px;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+.read-more {
+    display: block;
+    text-align: center;
+    background-color: var(--primary-color); /* Основний колір фону кнопки */
+    color: var(--button-text-color); /* Колір тексту кнопки */
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.read-more:hover {
+    background-color: var(--button-hover-color); /* Колір кнопки при наведенні */
+}
+
+/* Секція з категоріями */
+#category-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#category-list button {
+    width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--text-color); /* Основний колір тексту кнопок категорій */
+    background-color: var(--light-gray); /* Світло-сірий колір фону кнопок */
+    border: 1px solid var(--border-color); /* Колір обводки кнопок */
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#category-list button:hover {
+    background-color: var(--primary-color); /* Основний колір кнопок при наведенні */
+    color: var(--button-text-color); /* Колір тексту кнопок при наведенні */
+}
+
+/* Заголовок секції категорій */
+#categories h2 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--text-color); /* Основний колір тексту заголовка */
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#hidden-logo-link img {
+    opacity: 0.3;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#hidden-logo-link img:hover {
+    opacity: 1;
+}
+
+/* Контейнер для статей у рядок */
+#posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Стиль для кнопки "Читати далі" */
+.read-more {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* Основний колір кнопки */
+    color: var(--button-text-color); /* Колір тексту кнопки */
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: fit-content;
+}
+
+.read-more:hover {
+    background-color: var(--button-hover-color); /* Колір кнопки при наведенні */
+}
+
+/* Основний контейнер для статті */
+#article-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+}
+
+/* Центрування заголовка і лого */
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.article-header img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Дві колонки для тексту та зображень */
+.article-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Колонка з текстом статті */
+.article-text {
+    overflow: hidden;
+}
+
+/* Колонка з зображеннями */
+.article-images {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Зображення галереї */
+.article-images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .article-body {
+        display: block;
+    }
+
+    .article-images {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-images img {
+        height: auto;
+        max-height: none;
+    }
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: var(--primary-color); /* Основний колір фону кнопки */
+    color: var(--button-text-color); /* Колір тексту кнопки */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: var(--button-hover-color); /* Колір фону при наведенні */
+}

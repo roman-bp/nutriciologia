@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Додати нову статтю</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Додати нову статтю</h1>
+    <form id="addArticleForm">
+        <label for="category">Категорія:</label>
+        <select id="category" name="category" required>
+            <option value="Основи харчування">Основи харчування</option>
+            <option value="Схуднення">Схуднення</option>
+            <option value="Здоров’я шкіри">Здоров’я шкіри</option>
+            <option value="Рецепти">Рецепти</option>
+            <option value="Загальні поради">Загальні поради</option>
+        </select>
+
+        <label for="title">Заголовок:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Короткий опис:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="image">Шлях до зображення:</label>
+        <input type="text" id="image" name="image" required>
+
+        <label for="content">Повний текст статті:</label>
+        <textarea id="content" name="content" required></textarea>
+
+        <button type="button" onclick="addArticle()">Додати статтю</button>
+    </form>
+
+    <script src="form.js"></script>
+</body>
+</html>
